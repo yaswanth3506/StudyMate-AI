@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Analyzer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<a href="/" class="home-btn">← Home</a>
+
+<div class="resume-wrapper">
+
+    <div class="resume-header">
+
+        <div class="resume-icon">
+            📄
+        </div>
+
+        <h1>Resume Analyzer</h1>
+
+        <p>
+            Upload your resume and receive ATS score,
+            AI feedback and personalized suggestions.
+        </p>
+
+    </div>
+
+    <div class="resume-card">
+
+        <input
+            type="file"
+            id="resumeFile"
+            accept=".pdf">
+
+        <button onclick="analyzeResume()">
+
+            Analyze Resume
+
+        </button>
+
+    </div>
+
+    <div class="output-card">
+
+        <h3>AI Analysis</h3>
+
+        <div id="output">
+
+            Upload your resume to get AI analysis...
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>

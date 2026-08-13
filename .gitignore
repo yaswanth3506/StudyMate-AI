@@ -1,0 +1,24 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Uploaded files
+uploads/*
+
+# Keep the uploads folder itself
+!uploads/.gitkeep
+
+# IDE
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

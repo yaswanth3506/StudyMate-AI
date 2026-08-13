@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyMate AI</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="home-wrapper">
+
+        <!-- HERO -->
+
+        <div class="hero">
+
+            <div class="logo">
+                🧠
+            </div>
+
+            <h1>StudyMate <span>AI</span></h1>
+
+            <p class="tagline">
+                GenAI-Powered Study & Career Assistant
+            </p>
+
+            <p class="description">
+                Analyze resumes with ATS scoring and interact with your documents
+                using Retrieval-Augmented Generation (RAG). A modern AI assistant
+                designed for students and professionals.
+            </p>
+
+        </div>
+
+        <!-- TOOLS -->
+
+        <div class="tools">
+
+            <!-- Resume -->
+
+            <a href="/resume" class="tool-card">
+
+                <div class="tool-icon">
+                    📄
+                </div>
+
+                <h2>Resume Analyzer</h2>
+
+                <p>
+                    Improve your resume with AI-powered ATS analysis,
+                    skill detection, and personalized suggestions.
+                </p>
+
+                <div class="tool-features">
+
+                    <span>ATS Score</span>
+
+                    <span>Skill Match</span>
+
+                    <span>AI Feedback</span>
+
+                </div>
+
+                <button class="launch-btn">
+                    Launch Tool →
+                </button>
+
+            </a>
+
+            <!-- RAG -->
+
+            <a href="/rag" class="tool-card">
+
+                <div class="tool-icon">
+                    📚
+                </div>
+
+                <h2>Document Assistant</h2>
+
+                <p>
+                    Upload PDFs and ask questions using an intelligent
+                    Retrieval-Augmented Generation pipeline.
+                </p>
+
+                <div class="tool-features">
+
+                    <span>PDF Chat</span>
+
+                    <span>RAG</span>
+
+                    <span>Semantic Search</span>
+
+                </div>
+
+                <button class="launch-btn">
+                    Launch Tool →
+                </button>
+
+            </a>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            Built with Flask • FAISS • Sentence Transformers • LLM
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
