@@ -1,51 +1,100 @@
-# Skin Cancer Detection Using CNN
+# StudyMate AI – AI-Powered Study Assistant
 
-A Deep Learning-based skin lesion classification project that uses Convolutional Neural Networks (CNN) to analyze dermoscopic images and classify skin lesions into different categories.
+StudyMate AI is a Generative AI-powered study assistant that allows users to upload academic documents and interact with their content through natural language questions. It uses Retrieval-Augmented Generation (RAG) to retrieve relevant information from uploaded documents and generate context-aware responses.
 
 ## Overview
 
-Skin cancer detection at an early stage can help support timely medical evaluation. This project explores the use of Deep Learning and image classification techniques to identify different skin lesion categories from dermoscopic images.
+Studying from lengthy academic documents can make it difficult to find specific information quickly. StudyMate AI addresses this by providing an interactive question-answering system that helps users understand and explore their study materials.
 
-The system uses a CNN model trained on the HAM10000 dataset to learn image features and perform multi-class skin lesion classification.
+The application processes uploaded documents, converts their content into searchable representations, retrieves relevant context, and uses a Large Language Model (LLM) to generate answers.
 
 ## Features
 
-- **Image Classification:** Classifies dermoscopic images into multiple skin lesion categories.
-- **CNN-Based Model:** Uses Convolutional Neural Networks for automated image classification.
-- **Image Preprocessing:** Applies image preprocessing techniques to prepare images for model training.
-- **Data Augmentation:** Uses augmentation techniques to improve model generalization.
-- **Prediction:** Generates a predicted skin lesion category for an input image.
+- **Document Upload:** Upload academic materials in PDF format.
+- **Document Processing:** Extract text from uploaded documents using PyMuPDF.
+- **Semantic Search:** Retrieve relevant document content using Sentence Transformers and FAISS.
+- **AI-Powered Responses:** Generate context-aware answers using the Groq LLM API.
+- **Conversational Interface:** Interact with uploaded study materials using natural language queries.
+- **RAG Architecture:** Combine document retrieval with Large Language Model generation.
 
 ## Tech Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Programming language |
-| TensorFlow & Keras | Deep Learning model development |
-| CNN | Image classification |
-| HAM10000 | Dermoscopic image dataset |
-| NumPy | Numerical operations |
-| Matplotlib | Data visualization |
+| Streamlit | User interface |
+| Groq API | LLM integration |
+| FAISS | Vector similarity search |
+| Sentence Transformers | Text embeddings |
+| PyMuPDF | PDF text extraction |
+| RAG | Retrieval-Augmented Generation |
 
-## Dataset
+## System Workflow
 
-**HAM10000 (Human Against Machine with 10,000 training images)**
+1. **Document Upload:** Users upload their academic PDF documents.
+2. **Text Extraction:** PyMuPDF extracts textual content from the documents.
+3. **Text Processing:** Extracted content is divided into smaller chunks.
+4. **Embedding Generation:** Sentence Transformers converts text chunks into vector embeddings.
+5. **Vector Storage:** FAISS stores the embeddings for efficient similarity search.
+6. **Context Retrieval:** Relevant document chunks are retrieved based on the user's question.
+7. **Response Generation:** The retrieved context is passed to the Groq LLM API to generate a relevant answer.
+8. **User Interaction:** The generated response is displayed through the Streamlit interface.
 
-- Contains dermoscopic images of different skin lesion categories.
-- Used for training and evaluating the classification model.
-- Supports multi-class skin lesion classification.
+## RAG Architecture
 
-## Project Workflow
+The project follows a Retrieval-Augmented Generation pipeline:
 
-1. **Dataset Collection:** Obtain dermoscopic images from the HAM10000 dataset.
-2. **Image Preprocessing:** Resize and prepare images for model input.
-3. **Data Augmentation:** Apply image transformations to improve training.
-4. **Model Development:** Build a CNN-based classification model.
-5. **Model Training:** Train the model using the prepared dataset.
-6. **Model Evaluation:** Evaluate classification performance using appropriate metrics.
-7. **Prediction:** Use the trained model to classify input skin lesion images.
+**Document → Text Extraction → Chunking → Embeddings → FAISS Retrieval → Context → LLM → Answer**
 
+## Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yaswanth3506-beep/StudyMate-AI.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd StudyMate-AI
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure API Key
+
+Create a `.env` file in the project directory and add your Groq API key:
+
+```env
+GROQ_API_KEY=your_api_key_here
+```
+
+### 5. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+## Use Cases
+
+- Understanding lengthy academic documents.
+- Finding specific information from study materials.
+- Asking questions about uploaded PDFs.
+- Supporting interactive and personalized learning.
+
+## Future Enhancements
+
+- Support for DOCX and TXT documents.
+- Improved retrieval and response quality.
+- Document summarization.
+- Multi-document question answering.
+- Enhanced conversational memory.
 
 ## Disclaimer
 
-This project is developed for educational and research purposes only. It is not intended to replace professional medical diagnosis or clinical evaluation. Always consult a qualified healthcare professional for medical advice.
+StudyMate AI is an educational assistance tool designed to support learning and document exploration. Generated responses should be verified against the original study materials.
